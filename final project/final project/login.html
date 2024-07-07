@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url('https://images.pexels.com/photos/6207382/pexels-photo-6207382.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+  background-size: cover;
+  background-position: fixed;
+  background-attachment: fixed;
+}
+
+.login-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  opacity: 0.7;
+  colour: black;
+
+}
+
+h1 {
+  text-align: center;
+}
+label, input {
+  display: block;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius:30px;
+ 
+}</style>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>ShopNow - Login</title>
+</head>
+<body>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const loginForm = document.getElementById("login-form");
+  loginForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    // Check username and password (this is a simple example, in a real app you'd use server-side validation)
+    if (username === "Keerthana" && password === "12345678") {
+      alert("Login successful!");
+      // Redirect to product page or perform necessary actions
+      window.location.href = "home.html";
+    } else {
+      alert("Invalid credentials. Please try again.");
+    }
+  });
+});
+</script>
+  <div class="login-container">
+    <h1>Login to ShopNow</h1>
+    <form id="login-form">
+      <label for="username"><b>Username:</b></label>
+      <input type="text" id="username" name="username" required>
+      <label for="password"><b>Password:</b></label>
+      <input type="password" id="password" name="password" required>
+      <button type="submit">Login</button>&nbsp; 
+    </form>
+  </div>
+  
+</body>
+</html>
